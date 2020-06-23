@@ -1,13 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.dushitaoyuan</groupId>
+  <groupId>com.taoyuanx</groupId>
   <artifactId>fastdfs-client-java</artifactId>
   <version>1.29-RELEASE</version>
   <name>fastdfs-client-java</name>
   <description>fastdfs client for java</description>
   <packaging>jar</packaging>
+    <url>https://github.com/dushitaoyuan/fastdfs-client-java</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -49,8 +50,8 @@
             <activation>
                 <jdk>[1.6,)</jdk>
             </activation>
-          <!-- java8版本导致javadoc打包编译失败时候，添加-->
-          <properties>
+            <!-- java8版本导致javadoc打包编译失败时候，添加-->
+            <properties>
                 <javadoc.opts>-Xdoclint:none</javadoc.opts>
             </properties>
         </profile>
@@ -59,21 +60,21 @@
             <id>release</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.3</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <serverId>repository</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
+                     <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
-                        <version>2.3.2</version>
+                        <version>2.4.2</version>
                         <configuration>
                             <autoVersionSubmodules>true</autoVersionSubmodules>
                             <useReleaseProfile>false</useReleaseProfile>

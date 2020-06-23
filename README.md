@@ -23,16 +23,12 @@ mvn install:install-file -DgroupId=org.csource -DartifactId=fastdfs-client-java 
 ## 在您的maven项目pom.xml中添加依赖
 
 ```xml
-<dependency>
-    <groupId>com.github.dushitaoyuan</groupId>
-    <artifactId>fastdfs-client-java</artifactId>
-    <version>1.29-SNAPSHOT</version>
-</dependency>
+
 
 <dependency>
-    <groupId>com.github.dushitaoyuan</groupId>
+    <groupId>com.taoyuanx</groupId>
     <artifactId>fastdfs-client-java</artifactId>
-    <version>1.29-SNAPSHOT</version>
+    <version>1.29-RELEASE</version>
 </dependency>
 ```
 
